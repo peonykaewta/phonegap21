@@ -10,5 +10,11 @@ function ProfileCtrl ($scope) {
 	// body...
 
 	$scope.salary = 15000
+	$scope.user = {
+		name:"Kaewta",
+		age:"21",
+		food:"สเต็ก"
+	}
+	
 
 }
