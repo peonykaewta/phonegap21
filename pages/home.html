@@ -1,3 +1,30 @@
+<input type="text" ng-model="pic_url">
+<a ng-href="{{pic_url}}" target="_blank" >
+ 	<img ng-src="{{pic_url}}" />
+ </a>
+ 
+<div>
+	Hi my name is {{people.name}} age 
+	{{people.age}}<br/>
+	{{people}}
+</div>
+
+
+<div>
+	<button ng-click="test(5)">TEST</button>
+	<button ng-click="test('opopopopopopopopop')">TEST String</button>
+	<button ng-click="test(people)">TEST Object</button>
+</div>
+
+
+
+
+
+
+
+
+
+
 <!-- <form ng-submit="calculate()">
 	<input ng-change="is_show_grade=false" type="number" ng-model="score">
 </form> -->
@@ -14,7 +41,7 @@
 <br/> -->
 
 
-	<p>Calculator</p>
+<!-- 	<p>Calculator</p>
 
 <input ng-change="is_show_value=false" type="number" ng-model="first" class="form-control">
 <input ng-change="is_show_value=false" type="number" ng-model="second" class="form-control">
@@ -30,4 +57,8 @@
 	<h2>{{value}}</h2>
 
 </div>
+
+ -->
+
+
 
