@@ -12,6 +12,12 @@ function HomeCtrl ($scope) {
 			alert(a)
 	}
 	$scope.people = {name: 'PPP', age: 20}
+	$scope.products=[
+		{name: "Coke",price:20},
+		{name: "Pepsi",price:20},
+		{name: "Banana",price:20},
+		{name: "Fanta",price:20},
+	]
 
 
 	// $scope.is_show_grade = false;
