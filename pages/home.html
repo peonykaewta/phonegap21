@@ -1,0 +1,33 @@
+<!-- <form ng-submit="calculate()">
+	<input ng-change="is_show_grade=false" type="number" ng-model="score">
+</form> -->
+<!-- <button>Caculute</button><br/> -->
+<!-- <button ng-click="calculate()"  >Caculute</button><br/> -->
+<!-- Your score is {{score}} you got grade {{grade}} -->
+<!-- <div ng-hide="is_show_grade">
+	พิพม์สิครับ คะแนนน่ะ
+</div>
+<div ng-show="is_show_grade" >
+	Your score is {{score}} you got grade {{grade}}
+</div>
+
+<br/> -->
+
+
+	<p>Calculator</p>
+
+<input ng-change="is_show_value=false" type="number" ng-model="first" class="form-control">
+<input ng-change="is_show_value=false" type="number" ng-model="second" class="form-control">
+	
+<button ng-click="add()" class="btn btn-primary form-control btn-lg"  >+</button>
+<button ng-click="minus()" class="btn btn-primary  form-control btn-lg"  >-</button>
+<button ng-click="multiply()" class="btn btn-primary  form-control btn-lg"  >x</button>
+<button ng-click="divide()" class="btn btn-primary  form-control btn-lg"  >/</button>
+
+
+<div ng-show="is_show_value">
+
+	<h2>{{value}}</h2>
+
+</div>
+
