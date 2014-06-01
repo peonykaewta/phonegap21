@@ -11,12 +11,11 @@ app.config(function($routeProvider) {
          templateUrl: 'pages/home.html',
          controller: 'HomeCtrl'
       }).when('/win', { 
-         templateUrl: 'pages/win.html',
-         controller: 'WinCtrl'
+          templateUrl: 'pages/win.html',
+          controller: 'WinCtrl'
       }).when('/highscore', { 
          templateUrl: 'pages/score.html',
          controller: 'HighCtrl'
-      })
-      // ...
+       })
   });
 
