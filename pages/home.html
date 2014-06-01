@@ -17,6 +17,11 @@ Hi my name is {{people.name}} age
 <table class="table">
 <tr ng-repeat="item in products">
 <td>
+<img ng-src="{{item.img}}">
+<input ng-show="item.is_edit" type="text"
+ng-model="item.img">
+</td>
+<td>
 <span ng-hide="item.is_edit">{{item.name}}</span>
 <input ng-show="item.is_edit" type="text"
 ng-model="item.name">
@@ -27,8 +32,9 @@ ng-model="item.name">
 ng-model="item.price">
 </td>
 <td>
-<button
+<button ng-hide="item.is_edit"
 ng-click="edit(item)">Edit</button>
+<button ng-show="item.is_edit" ng-click="save(item)">Save</button>
 </td>
 </tr>
 </table>
