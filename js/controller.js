@@ -10,7 +10,8 @@ $scope.questions = [
 ]
 
 $scope.img = $scope.questions[$scope.question_index].img;
-
+$scope.score = 0;
+$rootScope.is_new_record = false;
 
 $scope.answer = function()
 {
@@ -21,25 +22,39 @@ if($scope.input == $scope.questions[$scope.question_index].answer)
 $scope.question_index++;
 if($scope.question_index < $scope.questions.length)
 $scope.img = $scope.questions[$scope.question_index].img;
-}
+$scope.score += 100;
+}else
+$scope.score -= 10;
 $scope.input = "";
 if($scope.question_index == $scope.questions.length)
 {
 $rootScope.is_win = true;
-$location.path('/win')
+if(typeof $rootScope.high_score == 'undefined' || $rootScope.high_score < $scope.score)
+{
+$rootScope.is_new_record = true;
+$rootScope.high_score = $scope.score;
+}
+$rootScope.current_score = $scope.score;
+$location.path('/win');
 }
 }
 
 }
 
-function WinCtrl($scope, $location)
+function WinCtrl($scope, $location, $rootScope)
 {
 if(!$scope.is_win)
 $location.path('/');
-
-}
-function HighscoreCtrl($scope)
+$scope.sendScore = function()
 {
-	$scope.winer = {name: 'PPP'}
+$rootScope.high_score_name = $scope.name;
+$location.path('highscore');
+}
+}
+
+function HighCtrl($scope, $rootScope)
+{
+$scope.name = $rootScope.high_score_name;
+$scope.score = $rootScope.high_score;
 }
 
