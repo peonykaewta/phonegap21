@@ -1,4 +1,44 @@
-<input type="text" ng-model="pic_url">
+ <table class="table">
+ 	<tr ng-repeat="item in products">
+ 		<td>
+		<img ng-src="{{item.img}}">
+			<input ng-show="item.is_edit" type="text" 
+			ng-model="item.img">
+		</td>
+		<td>
+ 			<span ng-hide="item.is_edit">{{item.name}}</span>
+ 			<input ng-show="item.is_edit" type="text" 
+			ng-model="item.name">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <input type="text" ng-model="pic_url">
 <a ng-href="{{pic_url}}" target="_blank" >
  	<img ng-src="{{pic_url}}" />
  </a>
@@ -23,7 +63,7 @@
 		<td>{{item.price}}</td>
 	</tr>
 </table>
-
+ -->
 
 
 
