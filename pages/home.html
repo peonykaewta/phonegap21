@@ -1,109 +1,36 @@
- <table class="table">
- 	<tr ng-repeat="item in products">
- 		<td>
-		<img ng-src="{{item.img}}">
-			<input ng-show="item.is_edit" type="text" 
-			ng-model="item.img">
-		</td>
-		<td>
- 			<span ng-hide="item.is_edit">{{item.name}}</span>
- 			<input ng-show="item.is_edit" type="text" 
-			ng-model="item.name">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <input type="text" ng-model="pic_url">
+<input type="text" ng-model="pic_url">
 <a ng-href="{{pic_url}}" target="_blank" >
- 	<img ng-src="{{pic_url}}" />
- </a>
+<img ng-src="{{pic_url}}" />
+</a>
 
 <div>
-	Hi my name is {{people.name}} age 
-	{{people.age}}<br/>
-	{{people}}
+Hi my name is {{people.name}} age
+{{people.age}}<br/>
+{{people}}
 </div>
-
-
 <div>
-	<button ng-click="test(5)">TEST</button>
-	<button ng-click="test('opopopopopopopopop')">TEST String</button>
-	<button ng-click="test(people)">TEST Object</button>
+<button ng-click="test(5)">TEST</button>
+<button ng-click="test('popopopopop')">TEST String</button>
+<button ng-click="test(people)">TEST Object</button>
 </div>
-
 
 <table class="table">
-	<tr ng-repeat="item in products">
-		<td>{{item.name}}</td>
-		<td>{{item.price}}</td>
-	</tr>
+<tr ng-repeat="item in products">
+<td>
+<span ng-hide="item.is_edit">{{item.name}}</span>
+<input ng-show="item.is_edit" type="text"
+ng-model="item.name">
+</td>
+<td>
+<span ng-hide="item.is_edit">{{item.price}}</span>
+<input ng-show="item.is_edit" type="number"
+ng-model="item.price">
+</td>
+<td>
+<button
+ng-click="edit(item)">Edit</button>
+</td>
+</tr>
 </table>
- -->
-
-
-
-
-
-
-<!-- <form ng-submit="calculate()">
-	<input ng-change="is_show_grade=false" type="number" ng-model="score">
-</form> -->
-<!-- <button>Caculute</button><br/> -->
-<!-- <button ng-click="calculate()"  >Caculute</button><br/> -->
-<!-- Your score is {{score}} you got grade {{grade}} -->
-<!-- <div ng-hide="is_show_grade">
-	พิพม์สิครับ คะแนนน่ะ
-</div>
-<div ng-show="is_show_grade" >
-	Your score is {{score}} you got grade {{grade}}
-</div>
-
-<br/> -->
-
-
-<!-- 	<p>Calculator</p>
-
-<input ng-change="is_show_value=false" type="number" ng-model="first" class="form-control">
-<input ng-change="is_show_value=false" type="number" ng-model="second" class="form-control">
-	
-<button ng-click="add()" class="btn btn-primary form-control btn-lg"  >+</button>
-<button ng-click="minus()" class="btn btn-primary  form-control btn-lg"  >-</button>
-<button ng-click="multiply()" class="btn btn-primary  form-control btn-lg"  >x</button>
-<button ng-click="divide()" class="btn btn-primary  form-control btn-lg"  >/</button>
-
-
-<div ng-show="is_show_value">
-
-	<h2>{{value}}</h2>
-
-</div>
-
- -->
-
 
 
