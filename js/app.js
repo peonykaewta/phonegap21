@@ -5,10 +5,19 @@ var app = angular.module('grader', [
   "mobile-angular-ui.touch",
   "mobile-angular-ui.scrollable"
 ])
+
 app.config(function($routeProvider) {
       $routeProvider.when('/', { 
          templateUrl: 'pages/home.html',
          controller: 'HomeCtrl'
+      }).when('/win', { 
+         templateUrl: 'pages/win.html',
+         controller: 'WinCtrl'
+      })
+      .when('/highscore', { 
+         templateUrl: 'pages/highscore.html',
+         controller: 'HighscoreCtrl'
       })
       // ...
   });
+
